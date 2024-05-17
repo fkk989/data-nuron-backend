@@ -1,0 +1,61 @@
+openapi: 3.0.0
+info:
+  title: Api for getting child Data Details
+  description: API adding, updating, getting child Data
+  version: 1.0.0
+servers:
+  - url: http://localhost:3000/api
+paths:
+  /child-data:
+    get:
+      summary: Get child data
+      responses:
+        "200":
+          description: Successful response
+  /child-data/create:
+    post:
+      summary: Create child data
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                child:
+                  type: string
+                data:
+                  type: string
+              required:
+                - child
+                - data
+      responses:
+        "201":
+          description: Child data created successfully
+
+  /child-data/update:
+    put:
+      summary: Update child data
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: number
+                data:
+                  type: string
+              required:
+                - id
+                - data
+      responses:
+        "200":
+          description: Child data updated successfully
+  /child-data/count:
+    get:
+      summary: Get count of child data
+      responses:
+        "200":
+          description: Successful response
