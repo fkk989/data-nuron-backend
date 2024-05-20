@@ -19,16 +19,24 @@
 * pre requisite 
 1. you must have docker installed in you machine 
 
-* start the docker demon and run the command to run the docker compose file
 
-```
-npm run docker:compose
-```
 * install dependencies
 
 ```
 npm install
 ```
+* generate prisma clinet 
+
+```
+npx prisma generate
+```
+
+* start the docker demon and run the command to run the docker compose file
+
+```
+npm run docker:compose
+```
+
 
 * migrate schema to db
 
