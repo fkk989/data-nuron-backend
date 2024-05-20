@@ -4,7 +4,7 @@ import { updateCount } from "@/lib/helpers";
 import { z } from "zod";
 
 const createInput = z.object({
-  childName: z.string({ required_error: "child number is required" }),
+  childName: z.string({ required_error: "childName is required" }),
   data: z.string({ required_error: "data is required" }),
 });
 
