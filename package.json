@@ -8,7 +8,7 @@
     "dev": "tsc-watch --onSuccess \" npm run start\"",
     "build": "tsc -p .",
     "docker:compose": "docker-compose -f ./docker/docker-compose.yml up",
-    "docker:build": "docker build -t fkk989/data-nuron-assignment  -f ./docker/Dockerfile  .",
+    "docker:build": "docker build --platform linux/amd64,linux/arm64 -t fkk989/data-nuron-assignment  -f ./docker/Dockerfile  .",
     "db:push": "prisma db push",
     "db:studio": "prisma studio",
     "vercel-build": "echo hello"
